@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11863,7 +11863,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Display a description of the dataset</span>
@@ -12093,7 +12093,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Select three indices of your choice you wish to sample from the dataset</span>
@@ -12219,7 +12219,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[154]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]</span>
@@ -12236,7 +12236,7 @@ div#notebook {
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[154]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -12360,7 +12360,7 @@ The establishments of 3rd index: markets because it treats the most Fresh over t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Make a copy of the DataFrame, using the &#39;drop&#39; function to drop the given feature</span>
@@ -12429,7 +12429,7 @@ The establishments of 3rd index: markets because it treats the most Fresh over t
 <li>What was the reported prediction score? <br>
 r2_score = 0.128</li>
 <li>Is this feature necessary for identifying customers' spending habits?<br>
-My answer is no. In this case, we tried to predict delicatessen from other features. From the r2 score, however, it can be said that delicatessen is difficult to be predicted from others. So, delicatessen is not appropriate to differentiate customers' spending habits. On top of that, more strictly speaking, this couldn't mean that this feature is not necessary for identifying customes' spending habits. </li>
+My answer is yes. In this case, we tried to predict delicatessen from other features. From the r2 score, however, it can be said that delicatessen is difficult to be predicted from others. This means that Delicatessen has unique information about customers' spending habits. </li>
 </ul>
 
 </div>
@@ -12681,6 +12681,139 @@ My answer is no. In this case, we tried to predict delicatessen from other featu
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Fresh</th>
+      <th>Milk</th>
+      <th>Grocery</th>
+      <th>Frozen</th>
+      <th>Detergents_Paper</th>
+      <th>Delicatessen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>440.000000</td>
+      <td>440.000000</td>
+      <td>440.000000</td>
+      <td>440.000000</td>
+      <td>440.000000</td>
+      <td>440.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>12000.297727</td>
+      <td>5796.265909</td>
+      <td>7951.277273</td>
+      <td>3071.931818</td>
+      <td>2881.493182</td>
+      <td>1524.870455</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>12647.328865</td>
+      <td>7380.377175</td>
+      <td>9503.162829</td>
+      <td>4854.673333</td>
+      <td>4767.854448</td>
+      <td>2820.105937</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>3.000000</td>
+      <td>55.000000</td>
+      <td>3.000000</td>
+      <td>25.000000</td>
+      <td>3.000000</td>
+      <td>3.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>3127.750000</td>
+      <td>1533.000000</td>
+      <td>2153.000000</td>
+      <td>742.250000</td>
+      <td>256.750000</td>
+      <td>408.250000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>8504.000000</td>
+      <td>3627.000000</td>
+      <td>4755.500000</td>
+      <td>1526.000000</td>
+      <td>816.500000</td>
+      <td>965.500000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>16933.750000</td>
+      <td>7190.250000</td>
+      <td>10655.750000</td>
+      <td>3554.250000</td>
+      <td>3922.000000</td>
+      <td>1820.250000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>112151.000000</td>
+      <td>73498.000000</td>
+      <td>92780.000000</td>
+      <td>60869.000000</td>
+      <td>40827.000000</td>
+      <td>47943.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12688,17 +12821,18 @@ My answer is no. In this case, we tried to predict delicatessen from other featu
 <p><strong>Answer:</strong><br></p>
 <ul>
 <li>Using the scatter matrix as a reference, discuss the distribution of the dataset, specifically talk about the normality, outliers, large number of data points near 0 among others.<br>
-As for the normality, from the scatter matrix and distplot of each feature, all the feature distributions do not belong to normal distribution. On top of that, each feature includes a few outliers from each scatter matrix and boxplot. As for the large number of data points near 0, the scatterplot and pairplot show the top of kde around 0. This means that each feature has a large amount of data around 0. Although we focused on just one feature, it is ture. However, the scattermatrix also shows that most of customer has at least one feature which is not 0.  <br></li>
+As for the normality, from the diagonal of the scatter matrix and distplot of each feature, all the feature distributions do not belong to normal distribution. As the above table shows, the mean of each feature are different from its 50%.  Therefore, it can be said that each feature distribution donnot belong to normal distribution. On top of that, each feature includes a few outliers from each scatter matrix and boxplot. As for the large number of data points near 0, the scatterplot and pairplot show the top of kde around 0. This means that each feature has a large amount of data around 0. Although we focused on just one feature, it is ture. However, the scattermatrix also shows that most of customer has at least one feature which is not 0.  <br></li>
 <li>Are there any pairs of features which exhibit some degree of correlation? <br>
-From correlation heatmap, I can confirm three pairs whose correlations are larger than 0.6. 
-They are the following three pairs.<br>
+From my correlation heatmap, I can confirm three pairs whose correlations are larger than 0.6.They are the following three pairs.<br>
 Milk and Grocery <br>
 Milk and Detergents_paper<br>
-Grocery and Detergents_paper<br></li>
+Grocery and Detergents_paper<br>
+The most significant correlation is definetyly between Grocery and Detergent_Paper. Milk is also correlated with both these features, but the correlation is mild. <br></li>
 <li>Does this confirm or deny your suspicions about the relevance of the feature you attempted to predict? <br>
 This confirm my idea about the relevance of the feature, Delicatessen, because the correlation between Delicatessen and the others is pretty low from the heatmap. <br></li>
 <li>How is the data for those features distributed?<br>
-Milk, Grocery, and Detergetns_paper. The scattermatrix shows that oen feature increases as one another increases because of a positive correlation between those features. </li>
+From the off-diagonal of the scatter matrix, Milk, Grocery, and Detergetns_paper. The scattermatrix shows that oen feature increases as one another increases because of a positive correlation between those features. <br>
+The diagonal of the scatter matrix, distplot show that those features donnot belong to the normal distribution, but skewed distribution. The describe table also convinced that by quantative data. More concretely speaking, mean of each feature are different from its median. </li>
 </ul>
 
 </div>
